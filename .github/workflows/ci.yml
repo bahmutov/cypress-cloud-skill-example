@@ -1,0 +1,17 @@
+name: ci
+on: push
+jobs:
+  cypress-run:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      # Install dependencies with caching
+      # and run all Cypress tests
+      - name: Cypress run
+        # https://github.com/cypress-io/github-action
+        uses: cypress-io/github-action@v7
+        with:
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
