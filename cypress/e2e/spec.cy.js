@@ -6,5 +6,8 @@ describe('Suite A', () => {
     // make this test fail
     throw new Error('This test is supposed to fail')
   })
-  it('works 3', () => {})
+  it('works 3', () => {
+    // make this test fail too
+    throw new Error('This test is supposed to fail too')
+  })
 })
