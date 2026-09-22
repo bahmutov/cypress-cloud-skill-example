@@ -8,6 +8,6 @@ describe('Suite A', () => {
   })
   it('works 3', () => {
     // make this test fail too
-    // cy.wrap('hello').should('equal', 'bye')
+    cy.wrap('hello').should('equal', 'bye')
   })
 })
